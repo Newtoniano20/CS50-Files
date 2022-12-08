@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It is the one that takes the longest always, so it has big theta of n squared.
+
+sort2 uses: Merge Sort
+
+How do you know?: Because the time it takes to run is significantly smaller than the other two and scales well.
+
+sort3 uses: Selection Sort
+
+How do you know?: It is a middle ground, it's not the fastest nor the slowest, so it can only be selection sort

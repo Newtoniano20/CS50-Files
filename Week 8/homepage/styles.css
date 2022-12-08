@@ -1,0 +1,34 @@
+.title{
+    text-align: center;
+    font-size: 50px;
+    background-color: transparent;
+    color: #006400;
+    font-weight: bold;
+}
+.page{
+    background-image: url('wallpaper.jpg');
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+main{
+    color: #006400;
+}
+
+header{
+    font-size:large;
+}
+.poem{
+    font-size:medium;
+}
+
+.name{
+    margin-top: 200px;
+}
+#id{
+    color: white;
+    background-color: black;
+}
+.link{
+    color: inherit;
+}

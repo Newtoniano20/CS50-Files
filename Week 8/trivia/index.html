@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function incorrectf(incorrect){
+                        this.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    };
+            document.addEventListener('DOMContentLoaded', function()
+            {
+
+                let correct = document.getElementById('correct');
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                let incorrect1 = document.getElementById('incorrect1');
+                let incorrect2 = document.getElementById('incorrect2');
+                let incorrect3 = document.getElementById('incorrect3');
+                let incorrect4 = document.getElementById('incorrect4');
+                incorrect1.addEventListener('click', incorrectf, incorrect1);
+                incorrect2.addEventListener('click', incorrectf);
+                incorrect3.addEventListener('click', incorrectf);
+                incorrect4.addEventListener('click', incorrectf);
+
+                document.querySelector('#check').addEventListener('click', function() {
+
+                    let input = document.querySelector('input');
+                    if (input.value === 'Australia') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    }
+
+                }
+                );
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What's 1 meter in inches?</h3>
+                <button id="correct">39.3701</button>
+                <button id="incorrect1">12.4532</button>
+                <button id="incorrect2">46.5934</button>
+                <button id="incorrect3">89.4934</button>
+                <button id="incorrect4">100.2344</button>
+
+                <p id="feedback1"></p>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What's the name of the country where everything is upside down?</h3>
+                <input type="text"></input>
+                <button id="check">Check answer</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

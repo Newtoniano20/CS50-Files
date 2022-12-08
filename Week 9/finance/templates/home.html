@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="query" name="query" placeholder="Query" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <table class="table">
+      <thead>
+          <tr>
+            <th scope="col">Cash Balance</th>
+            <th scope="col">Total Value</th>
+          </tr>
+        </thead>
+      <tbody>
+          <tr>
+            <th scope="row">{{ cash[0]['cash'] }}</th>
+            <td>{{ total_value }}</td>
+          </tr>
+        </tbody>
+  </table>
+
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Price</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+        <tbody>
+          {% for stock in stocks %}
+            <tr>
+              <th scope="row">{{ stock['name'] }}</th>
+              <td>{{ stock['amount'] }}</td>
+              <td>{{ stock['price'] }}</td>
+              <td>{{ stock['value'] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+    </table>
+{% endblock %}
